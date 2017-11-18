@@ -21,4 +21,4 @@ mkdir -p /etc/shadowsocks-libev
 cp -rf assets/ss-server/etc/shadowsocks-libev/config.json /etc/shadowsocks-libev/
 update-rc.d shadowsocks-libev defaults 99
 echo "Please fill up ports and passwords by yourself."
-echo "Use [ /etc/init.d/shadowsocks-libev start ] to start service.
+echo "Use [ /etc/init.d/shadowsocks-libev start ] to start service."
