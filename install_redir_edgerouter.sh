@@ -9,6 +9,7 @@ dt=`date +%s`
 # Install prerequisites
 # sudo apt-get update
 # sudo apt-get -y -qq install libev4 libsodium18 libmbedcrypto0 libc-ares2
+dpkg -i assets/dependency_for_mips/*.deb
 
 # Copy binary files
 echo "Copying binary files..."
