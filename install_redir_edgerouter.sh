@@ -18,6 +18,7 @@ cp -rf bin/mips_cavium/* /config/ss/bin/
 
 # Copy init scripts and config files
 echo "Copying init scripts and config files..."
+mkdir -p /config/ss/conf
 if [ -f /config/ss/conf/config.json ]; then
     echo "Backing up old config file as config.json.backup_$dt"
     mv /config/ss/conf/config.json /config/ss/conf/config.json.backup_$dt
