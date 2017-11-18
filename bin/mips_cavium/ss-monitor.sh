@@ -9,12 +9,12 @@ if [ $COUNT -gt 1000 ]; then
 fi
 
 #check if shadowsocks ok
-curl --retry 1 --silent --connect-timeout 3 -I www.google.com > /dev/null
+curl --retry 5 --silent --connect-timeout 3 -I www.google.com > /dev/null
 if [ "$?" == "0" ]; then
 	echo '['$LOGTIME'] No Problem.' >> $LOGFILE
 	exit 0
 else
-	curl --retry 1 --silent --connect-timeout 3 -I www.baidu.com  > /dev/null
+	curl --retry 5 --silent --connect-timeout 3 -I www.baidu.com  > /dev/null
 	if [ "$?" == "0" ]; then
 		echo '['$LOGTIME'] Problem decteted, restarting shadowsocks.'  >> $LOGFILE
 		/etc/init.d/shadowsocks-libev restart
