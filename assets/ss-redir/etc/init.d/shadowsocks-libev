@@ -130,7 +130,7 @@ case "$1" in
 #	log_end_msg $?
 
 	log_daemon_msg "Starting ss-redir" "ss-redir"
-	start-stop-daemon -S -p $PIDFILE_SS_REDIR --oknodo --startas $DAEMON_SS_REDIR -c $SSCONFIG -f $PIDFILE_SS_REDIR $DAEMON_ARGS
+	start-stop-daemon -S -p $PIDFILE_SS_REDIR --oknodo --startas $DAEMON_SS_REDIR -- -c $SSCONFIG -f $PIDFILE_SS_REDIR $DAEMON_ARGS
 	log_end_msg $?
 
 #	log_daemon_msg "Starting pdnsd" "pdnsd"
