@@ -27,6 +27,7 @@ cp -Prvf assets /config/ss/
 cp -rf assets/ss-redir/etc/default/shadowsocks-libev /etc/default/shadowsocks-libev
 cp -rf assets/ss-redir/etc/shadowsocks-libev/config.json /config/ss/conf/config.json
 cp -rf assets/ss-redir/etc/shadowsocks-libev/acl.acl /config/ss/conf/acl.acl
+chmod a+x assets/ss-redir/etc/init.d/shadowsocks-libev
 cp -rf assets/ss-redir/etc/init.d/shadowsocks-libev /etc/init.d/shadowsocks-libev
 cp -rf assets/ss-redir/pdnsd.conf /config/ss/conf/pdnsd.conf
 cp -rf assets/ss-redir/chnroute.txt /config/ss/conf/chnroute.txt
