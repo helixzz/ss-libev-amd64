@@ -10,7 +10,7 @@ sudo apt-get -y -qq install libev4 libsodium18 libmbedcrypto0
 # Copy binary files
 echo "Copying binary files..."
 chmod a+x bin/ss-*
-cp -rf bin/ss-* /usr/local/bin/
+cp -rf bin/ss-* /usr/bin/
 
 # Copy init scripts and config files
 echo "Copying init scripts and config files..."
