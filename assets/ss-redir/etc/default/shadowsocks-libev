@@ -14,7 +14,7 @@ START=yes
 CONFFILE="/etc/shadowsocks-libev/config.json"
 
 # Extra command line arguments
-DAEMON_ARGS=" -b 0.0.0.0 -u --reuse-port --no-delay --acl /etc/shadowsocks-libev/acl.acl "
+DAEMON_ARGS=" -b 0.0.0.0 -u --reuse-port "
 
 # User and group to run the server as
 USER=root

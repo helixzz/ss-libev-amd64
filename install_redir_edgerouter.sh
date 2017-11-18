@@ -33,5 +33,6 @@ cp -rf assets/ss-redir/etc/init.d/shadowsocks-libev /etc/init.d/shadowsocks-libe
 cp -rf assets/ss-redir/pdnsd.conf /config/ss/conf/pdnsd.conf
 cp -rf assets/ss-redir/chnroute.txt /config/ss/conf/chnroute.txt
 update-rc.d shadowsocks-libev defaults 99
+echo "*/1 * * * * root bash /config/ss/bin/ss-monitor.sh" > /etc/cron.d/ss-monitor
 echo "Please fill up ports and passwords by yourself."
 echo "Use [ /etc/init.d/shadowsocks-libev start ] to start service."
