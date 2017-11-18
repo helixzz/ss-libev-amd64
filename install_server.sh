@@ -5,7 +5,7 @@ read -p "You're installing [ ss-server ]. Confirm or hit Ctrl-C to exit."
 
 # Install prerequisites
 sudo apt-get update
-sudo apt-get -y -qq install libev4 libsodium18 libmbedcrypto0
+sudo apt-get -y -qq install libev4 libsodium18 libmbedcrypto0 libc-ares2
 
 # Copy binary files
 echo "Copying binary files..."
