@@ -12,8 +12,8 @@ sudo apt-get -y -qq install libev4 libsodium18 libmbedcrypto0 libc-ares2
 
 # Copy binary files
 echo "Copying binary files..."
-chmod a+x bin/ss-*
-cp -rf bin/ss-* /usr/bin/
+chmod a+x bin/amd64/ss-*
+cp -rf bin/amd64/ss-* /usr/bin/
 
 # Copy init scripts and config files
 echo "Copying init scripts and config files..."
@@ -26,6 +26,7 @@ if [ -f /etc/shadowsocks-libev/config.json ]; then
     mv /etc/shadowsocks-libev/config.json /etc/shadowsocks-libev/config.json.backup_$dt
 fi
 cp -rf assets/ss-server/etc/shadowsocks-libev/config.json /etc/shadowsocks-libev/
+cp -rf assets/ss-server/etc/shadowsocks-libev/acl.acl /etc/shadowsocks-libev/acl.acl
 update-rc.d shadowsocks-libev defaults 99
 echo "Please fill up ports and passwords by yourself."
 echo "Use [ /etc/init.d/shadowsocks-libev start ] to start service."
