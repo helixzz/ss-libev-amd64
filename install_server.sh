@@ -22,6 +22,7 @@ cp -rf assets/ss-server/etc/init.d/shadowsocks-libev /etc/init.d/
 cp -rf assets/ss-server/etc/default/shadowsocks-libev /etc/default/
 mkdir -p /etc/shadowsocks-libev
 if [ -f /etc/shadowsocks-libev/config.json ]; then
+    echo "Backing up old config file as config.json.backup_$dt"
     mv /etc/shadowsocks-libev/config.json /etc/shadowsocks-libev/config.json.backup_$dt
 fi
 cp -rf assets/ss-server/etc/shadowsocks-libev/config.json /etc/shadowsocks-libev/
